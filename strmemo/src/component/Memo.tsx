@@ -1,7 +1,11 @@
 import "../index.css";
 
 function Memo() {
-  return <></>;
+  return (
+    <>
+      <input className="flex fusen flex-wrap"></input>
+    </>
+  );
 }
 
 export default Memo;
