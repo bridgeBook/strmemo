@@ -3,7 +3,7 @@ import "../index.css";
 function Memo() {
   return (
     <>
-      <input className="flex fusen flex-wrap"></input>
+      <textarea className="flex fusen flex-wrap "></textarea>
     </>
   );
 }

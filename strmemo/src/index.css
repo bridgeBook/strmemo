@@ -10,3 +10,8 @@
   color: #333333;
   overflow-wrap: break-word;
 }
+
+.addButton {
+  background-color: #ffffff;
+  outline: auto;
+}

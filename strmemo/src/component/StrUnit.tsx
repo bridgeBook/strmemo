@@ -2,44 +2,46 @@ import { useState } from "react";
 import "../index.css";
 
 function StrUnit() {
-  const [strActive1, setstrActive1] = useState(false);
-  const [strActive2, setstrActive2] = useState(false);
-  const [strActive3, setstrActive3] = useState(false);
-  const [strActive4, setstrActive4] = useState(false);
-  const [strActive5, setstrActive5] = useState(false);
+  const [strActive1, setstrActive1] = useState(true);
+  const [strActive2, setstrActive2] = useState(true);
+  const [strActive3, setstrActive3] = useState(true);
+  const [strActive4, setstrActive4] = useState(true);
+  const [strActive5, setstrActive5] = useState(true);
 
   const Str = () => {
+    // console.log(prop);
+
     return (
       <div className="flex cursor-pointer text-xl">
         <div
           className={strActive1 ? "text-black" : "text-amber-300"}
           onClick={str1}
         >
-          ★
+          <span className="">★</span>
         </div>
         <div
           className={strActive2 ? "text-black" : "text-amber-300"}
           onClick={str2}
         >
-          ★
+          <span className="">★</span>
         </div>
         <div
           className={strActive3 ? "text-black" : "text-amber-300"}
           onClick={str3}
         >
-          ★
+          <span className="">★</span>
         </div>
         <div
           className={strActive4 ? "text-black" : "text-amber-300"}
           onClick={str4}
         >
-          ★
+          <span className="">★</span>
         </div>
         <div
           className={strActive5 ? "text-black" : "text-amber-300"}
           onClick={str5}
         >
-          ★
+          <span className="">★</span>
         </div>
       </div>
     );
