@@ -11,7 +11,6 @@
   overflow-wrap: break-word;
 }
 
-.addButton {
-  background-color: #ffffff;
-  outline: auto;
+.header {
+  background-color: #000000;
 }
