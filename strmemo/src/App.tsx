@@ -20,6 +20,7 @@ function App() {
         name: name,
       },
     ]);
+    // console.log(strCount)
   };
 
   return (
@@ -51,7 +52,7 @@ function App() {
                   削除
                 </button>
               </div>
-              <Memo props={{ strCount, num }} />
+              <Memo strCount={strCount} num={num} />
             </div>
           </div>
         ))}
