@@ -10,7 +10,7 @@ type TestCount = {
   body: string;
 };
 
-export const StrCountContext = createContext<TestCount[]>([]);
+export const StrCountContext = createContext<any>(null);
 
 function App() {
   const [strCount, setstrCount] = useState<TestCount[]>([]);
@@ -25,12 +25,12 @@ function App() {
         body: "",
       },
     ]);
-    // console.log(strCount)
+    console.log(strCount);
   };
 
   return (
     <>
-      <StrCountContext.Provider value={strCount}>
+      <StrCountContext.Provider value={{ strCount, setstrCount }}>
         <div className="header w-screen h-24 text-4xl text-white font-extrabold flex items-center pl-12">
           StarMemo
         </div>
