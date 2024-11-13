@@ -25,8 +25,9 @@ function App() {
         body: "",
       },
     ]);
-    console.log(strCount);
   };
+
+  const strMemoDelete = (value: any) => {};
 
   return (
     <>
@@ -54,7 +55,10 @@ function App() {
               <div className="flex-col mt-10">
                 <div className="flex mb-1">
                   <StrUnit />
-                  <button className="focus:outline-none text-white bg-red-500 hover:bg-red-400 font-medium rounded-lg text-sm ml-20 px-4 py-1.5 me-2">
+                  <button
+                    onClick={strMemoDelete}
+                    className="focus:outline-none text-white bg-red-500 hover:bg-red-400 font-medium rounded-lg text-sm ml-20 px-4 py-1.5 me-2"
+                  >
                     削除
                   </button>
                 </div>
