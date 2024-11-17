@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "../index.css";
+import { StrCountContext } from "../App";
 
-function StrUnit() {
+function StrUnit(num: any) {
+  const strData = useContext(StrCountContext);
   const [strActive1, setstrActive1] = useState(true);
   const [strActive2, setstrActive2] = useState(true);
   const [strActive3, setstrActive3] = useState(true);
@@ -9,8 +11,6 @@ function StrUnit() {
   const [strActive5, setstrActive5] = useState(true);
 
   const Str = () => {
-    // console.log(prop);
-
     return (
       <div className="flex cursor-pointer text-xl">
         <div

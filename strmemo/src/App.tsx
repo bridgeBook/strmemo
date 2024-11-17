@@ -4,16 +4,17 @@ import Memo from "./component/Memo";
 import { useContext, useState, createContext } from "react";
 useContext;
 
-type TestCount = {
+type STR = {
   id: number;
   name: string;
   body: string;
+  str: number;
 };
 
 export const StrCountContext = createContext<any>(null);
 
 function App() {
-  const [strCount, setstrCount] = useState<TestCount[]>([]);
+  const [strCount, setstrCount] = useState<STR[]>([]);
   const [name, setName] = useState("");
 
   const AddStrmemo = () => {
@@ -23,11 +24,16 @@ function App() {
         id: strCount.length,
         name: name,
         body: "",
+        str: 0,
       },
     ]);
   };
 
-  const strMemoDelete = (value: any) => {};
+  const onClickDelete = (num: number) => {
+    const deleteBody = [...strCount];
+    deleteBody.splice(num, 1);
+    setstrCount(deleteBody);
+  };
 
   return (
     <>
@@ -50,19 +56,22 @@ function App() {
         </div>
 
         <div>
-          {Object.keys(strCount).map((num) => (
+          {Object.keys(strCount).map((str: any, index) => (
             <div className="ml-10">
               <div className="flex-col mt-10">
+                <div className="title font-bold text-xl">
+                  {strCount[index].name}
+                </div>
                 <div className="flex mb-1">
-                  <StrUnit />
+                  <StrUnit num={index} />
                   <button
-                    onClick={strMemoDelete}
+                    onClick={() => onClickDelete(index)}
                     className="focus:outline-none text-white bg-red-500 hover:bg-red-400 font-medium rounded-lg text-sm ml-20 px-4 py-1.5 me-2"
                   >
                     削除
                   </button>
                 </div>
-                <Memo strCount={strCount} num={num} />
+                <Memo strCount={strCount} num={index} />
               </div>
             </div>
           ))}
