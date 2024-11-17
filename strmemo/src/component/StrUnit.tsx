@@ -17,7 +17,6 @@ function StrUnit(props: any) {
   };
 
   const Str = () => {
-    console.log(strData);
     return (
       <div className="flex cursor-pointer text-xl">
         <div
@@ -139,6 +138,25 @@ function StrUnit(props: any) {
       handleChange(5);
     }
   };
+
+  const checkStr = () => {
+    console.log("aaa");
+    strData.strCount[props.num].str === 0
+      ? ""
+      : strData.strCount[props.num].str === 1
+      ? str1
+      : strData.strCount[props.num].str === 2
+      ? str2
+      : strData.strCount[props.num].str === 3
+      ? str3
+      : strData.strCount[props.num].str === 4
+      ? str4
+      : strData.strCount[props.num].str === 5
+      ? str5
+      : "";
+  };
+
+  checkStr();
 
   return <Str />;
 }

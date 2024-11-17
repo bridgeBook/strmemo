@@ -46,6 +46,7 @@ function App() {
           <input
             className="m-10 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg text-sm px-4 py-1.5 me-2 mb-2 w-64"
             value={name}
+            maxLength={12}
             onChange={(event) => setName(event.target.value)}
           />
           <button
@@ -56,7 +57,7 @@ function App() {
           </button>
         </div>
 
-        <div>
+        <div className="flex flex-wrap">
           {Object.keys(strCount).map((str: any, index) => (
             <div className="ml-10">
               <div className="flex-col mt-10">
