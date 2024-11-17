@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import "../index.css";
 import { StrCountContext } from "../App";
 
-function StrUnit(num: any) {
+function StrUnit(props: any) {
   const strData = useContext(StrCountContext);
   const [strActive1, setstrActive1] = useState(true);
   const [strActive2, setstrActive2] = useState(true);
@@ -10,7 +10,14 @@ function StrUnit(num: any) {
   const [strActive4, setstrActive4] = useState(true);
   const [strActive5, setstrActive5] = useState(true);
 
+  // 入力値が変わるたびに状態を更新
+  const handleChange = (event: any) => {
+    strData.strCount[props.num].str = event;
+    strData?.setstrCount(strData.strCount);
+  };
+
   const Str = () => {
+    console.log(strData);
     return (
       <div className="flex cursor-pointer text-xl">
         <div
@@ -54,12 +61,14 @@ function StrUnit(num: any) {
       setstrActive3(true);
       setstrActive4(true);
       setstrActive5(true);
+      handleChange(0);
     } else {
       setstrActive1(false);
       setstrActive2(true);
       setstrActive3(true);
       setstrActive4(true);
       setstrActive5(true);
+      handleChange(1);
     }
   };
   const str2 = () => {
@@ -69,12 +78,14 @@ function StrUnit(num: any) {
       setstrActive3(true);
       setstrActive4(true);
       setstrActive5(true);
+      handleChange(0);
     } else {
       setstrActive1(false);
       setstrActive2(false);
       setstrActive3(true);
       setstrActive4(true);
       setstrActive5(true);
+      handleChange(2);
     }
   };
   const str3 = () => {
@@ -84,12 +95,14 @@ function StrUnit(num: any) {
       setstrActive3(true);
       setstrActive4(true);
       setstrActive5(true);
+      handleChange(0);
     } else {
       setstrActive1(false);
       setstrActive2(false);
       setstrActive3(false);
       setstrActive4(true);
       setstrActive5(true);
+      handleChange(3);
     }
   };
   const str4 = () => {
@@ -99,12 +112,14 @@ function StrUnit(num: any) {
       setstrActive3(true);
       setstrActive4(true);
       setstrActive5(true);
+      handleChange(0);
     } else {
       setstrActive1(false);
       setstrActive2(false);
       setstrActive3(false);
       setstrActive4(false);
       setstrActive5(true);
+      handleChange(4);
     }
   };
   const str5 = () => {
@@ -114,12 +129,14 @@ function StrUnit(num: any) {
       setstrActive3(true);
       setstrActive4(true);
       setstrActive5(true);
+      handleChange(0);
     } else {
       setstrActive1(false);
       setstrActive2(false);
       setstrActive3(false);
       setstrActive4(false);
       setstrActive5(false);
+      handleChange(5);
     }
   };
 

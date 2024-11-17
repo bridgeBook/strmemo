@@ -63,7 +63,7 @@ function App() {
                   {strCount[index].name}
                 </div>
                 <div className="flex mb-1">
-                  <StrUnit num={index} />
+                  <StrUnit strCount={strCount} num={index} />
                   <button
                     onClick={() => onClickDelete(index)}
                     className="focus:outline-none text-white bg-red-500 hover:bg-red-400 font-medium rounded-lg text-sm ml-20 px-4 py-1.5 me-2"
