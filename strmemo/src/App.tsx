@@ -27,6 +27,7 @@ function App() {
         str: 0,
       },
     ]);
+    setName("");
   };
 
   const onClickDelete = (num: number) => {
