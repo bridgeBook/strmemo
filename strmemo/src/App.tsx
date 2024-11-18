@@ -58,7 +58,7 @@ function App() {
         </div>
 
         <div className="flex flex-wrap">
-          {Object.keys(strCount).map((str: any, index) => (
+          {Object.keys(strCount).map((_str: any, index) => (
             <div className="ml-10">
               <div className="flex-col mt-10">
                 <div className="title font-bold text-xl">
